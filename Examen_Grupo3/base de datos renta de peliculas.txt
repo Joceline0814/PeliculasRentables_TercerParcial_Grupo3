@@ -1,0 +1,31 @@
+create database peliculas_grupo3;
+
+CREATE TABLE cliente
+(
+cedula_cliente int( 10 ) ,
+nombre varchar( 30 ) ,
+aqpellido varchar( 30 ) 
+PRIMARY KEY ( cedula_cliente ) 
+);
+
+
+CREATE TABLE alquiler
+(
+codigo_alquiler int( 10 ) ,
+cedula_cliente1 int( 10 ) ,
+precio decimal( 10,2 ) ,
+fecha_entrega date ,
+fecha_regreso date,
+PRIMARY KEY ( codigo_alquiler ) ,
+FOREIGN KEY ( cedula_cliente1) REFERENCES cliente( cedula_cliente) 
+);
+
+CREATE TABLE peliculas
+(
+codigo_peliculas int( 10 ) ,
+cedula_cliente2 int( 10 ) ,
+genero varchar( 30 ) ,
+nombre varchar (30),
+PRIMARY KEY ( codigo_peliculas ) ,
+FOREIGN KEY (cedula_cliente2 ) REFERENCES cliente( cedula_cliente) 
+);
