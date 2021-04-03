@@ -1,0 +1,2 @@
+# PeliculasRentables_TercerParcial_Grupo3
+Utilizamos Visual Basic y Phpmyadmin
